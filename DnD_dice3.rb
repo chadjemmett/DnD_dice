@@ -1,8 +1,16 @@
 #d&d dice version 3. Solved some problems with the method. It was returning fail with every die that rolled 1.
+#fixed the problem if you put in a space or a letter or enter it would kick out a random float.
 def dice side
   choices = [0, 4, 6, 8, 10, 12, 20, 100]
-  
+  #convert to integer and check to see if it's zero. If you input a letter, it randomizes zero.
+side = side.to_i
+	if side == 0
+	  puts "Can't help you"
+	else
+#the great randomator.
   roll = 1 + rand(choices[side])
+  
+  end
   
   
   	#check to see if it's a 20 and wether we roll a crit or a fail.
@@ -14,6 +22,8 @@ def dice side
         
         #the final output.
       puts roll
+      #take this out before shipping.
+      puts "*********************"
       end
 end
 
@@ -27,17 +37,19 @@ def text_menu
   puts "1 = d4/ 2 = d6/ 3 = d8/ 4 = d10/ 5 = d12/ 6 = d20/ 7 = d100"
   
 end      
-      
+ 
+ 
+ 
+ 
+ 
 input = ''
 
 
-puts "Welcome to Dark Dice."
-input = gets.chomp.to_i
-
-while input != "Q" || input != "q"
 text_menu
-input = gets.chomp.to_i
- 
- dice input
-  
-end
+input = gets.chomp
+	while input != "Q" || input != "q"
+	  text_menu
+	  dice input
+	  input = gets.chomp
+	end
+

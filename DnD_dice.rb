@@ -1,4 +1,4 @@
-#D&D dice class and stuff.
+#D&D dice class and stuff. Moving on to the next file DnD_dice2.rb
 
 
 
