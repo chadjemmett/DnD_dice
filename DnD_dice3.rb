@@ -1,5 +1,6 @@
 #d&d dice version 3. Solved some problems with the method. It was returning fail with every die that rolled 1.
 #fixed the problem if you put in a space or a letter or enter it would kick out a random float.
+#this is so close to working.
 def dice side
   choices = [0, 4, 6, 8, 10, 12, 20, 100]
   #convert to integer and check to see if it's zero. If you input a letter, it randomizes zero.
@@ -37,7 +38,7 @@ def text_menu
   puts "1 = d4/ 2 = d6/ 3 = d8/ 4 = d10/ 5 = d12/ 6 = d20/ 7 = d100"
   
 end      
- 
+
  
  
  
