@@ -1,4 +1,5 @@
 #This works as of  May 03, 2012
+#Fixed up the text_menu method.
 #d&d dice version 4. Solved some problems with the method. It was returning fail with every die that rolled 1.
 #fixed the problem if you put in a space or a letter or enter it would kick out a random float.
 #
@@ -26,6 +27,8 @@ side = side.to_i
         else
         
         #the final output.
+        lw = 50
+        puts "~~~~~~~~~~~"
       puts roll
       text_menu
       end
@@ -35,12 +38,21 @@ end
 
 #this is the text menu information.
 def text_menu
-
-  #this could use some formatting for more clarity.
-  puts "Pick a die to roll"
-  puts "1 = d4/ 2 = d6/ 3 = d8/ 4 = d10/ 5 = d12/ 6 = d20/ 7 = d100"
+ lw = 50
+ 14.times do
+ puts ''
+ end
+  a = ["Choose your die", " 'q' to quit", "1 = d4", "2 = d6", "3 = d8", "4 = d10", "5 = d12", "6 = d20", "7 = 100", "*************************************"]
+  puts (a[0].center(lw))
+  puts (a[1].center(lw))
+  puts (a[9].center(lw))
+  puts (a[2].ljust(lw/3 ) + a[3].ljust(lw/3) + a[4].rjust(lw/3))
+  puts (a[5].ljust(lw/3 ) + a[6].ljust(lw/3) + a[7].rjust(lw/3))
+  puts (a[8].center(lw))
+  puts (a[9].center(lw))
   
-end      
+
+end     
 
  
  
