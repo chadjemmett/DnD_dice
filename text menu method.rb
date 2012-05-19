@@ -13,5 +13,3 @@ def text_menu
   
 
 end
-
-text_menu
