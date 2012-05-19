@@ -20,6 +20,8 @@ def dice side
      
         #outputs the final number.
         puts random_number
+        puts "~~~~~~~~~~~~~~"
+        #text_menu
      end
     end
 
